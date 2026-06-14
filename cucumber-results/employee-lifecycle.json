@@ -1,0 +1,233 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "orangehrm-employee-lifecycle-management;verify-complete-employee-lifecycle-using-ui-and-api",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify complete employee lifecycle using UI and API",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 4952029499,
+              "error_message": "browserContext.newPage: Target page, context or browser has been closed\n    at AllureCucumberWorld.<anonymous> (C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\Hooks\\Hooks.js:25:32)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User launches OrangeHRM application",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:36"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User logs in with valid credentials from test data",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:57"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should verify dashboard is displayed",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:64"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "User adds a new employee from test data with profile picture",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "User should verify employee is added successfully",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "User searches the employee by employee id from test data",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:100"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "User updates job title and employment status from test data",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:105"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "User should verify employee details are updated successfully",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:111"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "User validates the employee details using API",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:127"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User should verify API details match with UI data",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:178"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User deletes the employee from UI",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:207"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "User should verify employee is deleted in UI and API",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:213"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User logs out from OrangeHRM",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:230"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "User should verify login page is displayed",
+            "match": {
+              "location": "file:\\C:\\Users\\User\\Playwright_Automation\\Playwright-OrangeHRM-main\\Playwright-OrangeHRM-main\\StepDefination\\EmployeeLifecycleStep.js:235"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 224827600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@employee-lifecycle",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "orangehrm-employee-lifecycle-management",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "OrangeHRM Employee Lifecycle Management",
+    "tags": [
+      {
+        "name": "@employee-lifecycle",
+        "line": 1
+      }
+    ],
+    "uri": "Features\\EmployeeLifecycleManagement.feature"
+  }
+]

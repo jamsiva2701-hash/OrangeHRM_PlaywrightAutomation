@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-06-14T12:04:51.026Z",
+  "method": "POST",
+  "endpoint": "/users",
+  "payload": {
+    "firstName": "Jamuna",
+    "lastName": "M",
+    "employeeId": "7306412",
+    "jobTitle": "Account Assistant",
+    "employmentStatus": "Full-Time Permanent"
+  },
+  "status": 401,
+  "responseBody": {}
+}

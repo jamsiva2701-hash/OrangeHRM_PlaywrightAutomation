@@ -1,0 +1,37 @@
+{
+  "default": {
+    "paths": [
+      "Features/EmployeeLifecycleManagement.feature"
+    ],
+    "require": [
+      "StepDefination/EmployeeLifecycleStep.js",
+      "Hooks/Hooks.js"
+    ],
+    "dryRun": false,
+    "tags": "@employee-lifecycle",
+    "format": [
+      "json:cucumber-results/employee-lifecycle.json",
+      "html:Reports/cucumber-report.html",
+      "allure-cucumberjs/reporter"
+    ],
+    "retry": 1
+  },
+
+  "employee-lifecycle": {
+    "paths": [
+      "Features/EmployeeLifecycleManagement.feature"
+    ],
+    "require": [
+      "StepDefination/EmployeeLifecycleStep.js",
+      "Hooks/Hooks.js"
+    ],
+    "dryRun": false,
+    "tags": "@employee-lifecycle",
+    "format": [
+      "json:cucumber-results/employee-lifecycle.json",
+      "html:Reports/cucumber-report.html",
+      "allure-cucumberjs/reporter"
+    ],
+    "retry": 1
+  }
+}

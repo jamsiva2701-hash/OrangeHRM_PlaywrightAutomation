@@ -1,0 +1,77 @@
+name: Cucumber Tests with Multiple Reports
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Install Playwright
+      run: npx playwright install
+    
+    - name: Run Search Tests
+      run: npm run test:search
+      continue-on-error: true
+    
+    - name: Run Login Tests
+      run: npm run test:login
+      continue-on-error: true
+    
+    - name: Generate Cucumber Reports
+      run: npm run generate:reports
+      if: always()
+    
+    - name: Upload Search Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: SearchReport-${{ matrix.node-version }}
+        path: Reports/SearchReport.html
+    
+    - name: Upload Login Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: LoginReport-${{ matrix.node-version }}
+        path: Reports/LoginReport.html
+    
+    - name: Upload Consolidated Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: ConsolidatedReport-${{ matrix.node-version }}
+        path: Reports/ConsolidatedReport.html
+    
+    - name: Upload Report Dashboard
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: ReportDashboard-${{ matrix.node-version }}
+        path: Reports/index.html
+    
+    - name: Upload Allure Results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: AllureResults-${{ matrix.node-version }}
+        path: allure-results/
