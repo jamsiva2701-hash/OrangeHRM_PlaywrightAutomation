@@ -32,6 +32,6 @@
       "html:Reports/cucumber-report.html",
       "allure-cucumberjs/reporter"
     ],
-    "retry": 1
+    "retry": 0
   }
 }

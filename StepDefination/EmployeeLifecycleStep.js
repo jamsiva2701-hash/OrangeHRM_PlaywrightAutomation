@@ -78,23 +78,72 @@ When('User adds a new employee from test data with profile picture', { timeout: 
     employeeIdUpdated = await addEmployeePage.addEmployee(firstName, lastName, profileImagePath);
 });
 
-Then('User should verify employee is added successfully', async function () {
-    employeeListPage = new EmployeeListPage(page);
-    await employeeListPage.searchEmployee(employeeIdUpdated);
-    const isPresent = await employeeListPage.isEmployeePresent();
-    if (!isPresent) {
-        throw new Error('Employee was not added successfully');
-    }
-    console.log('Employee verified in list');
+// Then('User should verify employee is added successfully', async function () {
+//     employeeListPage = new EmployeeListPage(page);
+//     await employeeListPage.searchEmployee(employeeIdUpdated);
+//     const isPresent = await employeeListPage.isEmployeePresent();
+//     if (!isPresent) {
+//         throw new Error('Employee was not added successfully');
+//     }
+//     console.log('Employee verified in list');
     
-    // Capture screenshot for verification
-    const screenshotPath = `screenshots/employee-added-${Date.now()}.png`;
-    if (!fs.existsSync('screenshots')) {
-        fs.mkdirSync('screenshots', { recursive: true });
+//     // Capture screenshot for verification
+//     const screenshotPath = `screenshots/employee-added-${Date.now()}.png`;
+//     if (!fs.existsSync('screenshots')) {
+//         fs.mkdirSync('screenshots', { recursive: true });
+//     }
+//     await page.screenshot({ path: screenshotPath, fullPage: true });
+//     this.attach(fs.readFileSync(screenshotPath), 'image/png');
+//     console.log(`Screenshot captured: ${screenshotPath}`);
+// });
+
+Then(
+    'User should verify employee is added successfully',
+    { timeout: 100000 },
+    async function () {
+
+    console.log('========== VERIFY EMPLOYEE STARTED ==========');
+
+    employeeListPage = new EmployeeListPage(page);
+
+    console.log('Calling searchEmployee...');
+
+    await employeeListPage.searchEmployee(employeeIdUpdated);
+
+    console.log('searchEmployee completed');
+
+    console.log('Calling isEmployeePresent...');
+
+    const isPresent =
+        await employeeListPage.isEmployeePresent(employeeIdUpdated);
+
+    console.log(`isEmployeePresent returned: ${isPresent}`);
+
+    if (!isPresent) {
+
+        await page.screenshot({
+            path: `screenshots/employee-not-found-${Date.now()}.png`,
+            fullPage: true
+        });
+
+        throw new Error(
+            `Employee ${employeeIdUpdated} was not found in search results`
+        );
     }
-    await page.screenshot({ path: screenshotPath, fullPage: true });
-    this.attach(fs.readFileSync(screenshotPath), 'image/png');
+
+    console.log('Employee verified in list');
+
+    const screenshotPath =
+        `screenshots/employee-added-${Date.now()}.png`;
+
+    await page.screenshot({
+        path: screenshotPath,
+        fullPage: true
+    });
+
     console.log(`Screenshot captured: ${screenshotPath}`);
+
+    console.log('========== VERIFY EMPLOYEE COMPLETED ==========');
 });
 
 When('User searches the employee by employee id from test data', { timeout: 30000 }, async function () {

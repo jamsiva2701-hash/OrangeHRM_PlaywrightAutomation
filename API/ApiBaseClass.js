@@ -25,10 +25,18 @@ export class ApiBaseClass {
         this.payload = body;
     }
 
+    // addDefaultHeaders() {
+    //     this.addHeader('Content-Type', 'application/json');
+    //     console.log('Default headers added');
+    // }
     addDefaultHeaders() {
-        this.addHeader('Content-Type', 'application/json');
-        console.log('Default headers added');
-    }
+    this.addHeader('Content-Type', 'application/json');
+    this.addHeader(
+        'x-api-key',
+        'pro_53221e47f1e0dc774ec5191a0f243fe8bb3383cc9b4bf1d1bb0e0414b31b7ed8'
+    );
+    console.log('Default headers added');
+}
 
     async sendRequest(method, endpoint) {
         try {
