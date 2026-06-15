@@ -40,7 +40,7 @@ This framework automates end-to-end testing of the OrangeHRM application, coveri
 ## 📁 Project Structure
 
 ```
-Framework4PMClass/
+Playwright-OrangeHRM-MAIN/
 ├── .github/
 │   └── workflows/               # GitHub CI/CD workflows
 │       ├── cucumber-reports.yml
