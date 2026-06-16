@@ -299,12 +299,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 4. Push to branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
-## 📞 Support
-
-For issues, questions, or suggestions:
-- Create an issue on GitHub
-- Contact: premkumar@example.com
-
 ## 🙏 Acknowledgments
 
 - OrangeHRM for the test application
